@@ -15,6 +15,8 @@ Random random = new Random();
 int random_now;
 int quantidade_caracteres_especiais = 0;
 int limite_caracteres_especiais = 0;
+string caminhoArquivo = "bkp.txt";
+
 
 Console.WriteLine("Gerador de senhas!");
 Console.WriteLine("Insira o tamanho da senha: ");
