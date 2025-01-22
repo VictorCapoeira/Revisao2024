@@ -8,6 +8,7 @@ string [][] padroes = {
     new string[] {"!","@","#","$","%","&","*","/","?",".",","}
 };
 int tamanho_senha;
+Random random = new Random();
 
 
 Console.WriteLine("Gerador de senhas!");
