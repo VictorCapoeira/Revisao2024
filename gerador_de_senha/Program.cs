@@ -190,8 +190,10 @@ for (int i = 0; i < tamanho_senha; i++)
     }
 }
 Console.Clear();
-Console.Write("Senha gerada: ");
+Console.Write("Senha gerada e salva em arquivo: ");
 for (int i = 0; i < senha.Length; i++)
 {
     Console.Write(senha[i]);
 }
+string senha_gerada = string.Join("",senha);
+File.AppendAllText(caminhoArquivo, senha_gerada + Environment.NewLine);
