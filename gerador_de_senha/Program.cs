@@ -1,5 +1,6 @@
 ﻿// See https://aka.ms/new-console-template for more information
 string senha_numero_vef;
+string senha_letras_vef;
 Console.WriteLine("Gerador de senhas!");
 Console.WriteLine("Insira o tamanho da senha: ");
 while(!(int.TryParse(Console.ReadLine(), out int resultado))){
