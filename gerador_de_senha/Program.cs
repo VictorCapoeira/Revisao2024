@@ -10,6 +10,8 @@ string [][] padroes = {
 int tamanho_senha;
 Random random = new Random();
 int random_now;
+int quantidade_caracteres_especiais;
+int limite_caracteres_especiais;
 
 Console.WriteLine("Gerador de senhas!");
 Console.WriteLine("Insira o tamanho da senha: ");
@@ -32,13 +34,22 @@ do{
         Console.WriteLine("Informe um reposta válida! (somente S ou N)");
 }while(senha_letras_vef != "s" && senha_letras_vef != "n"  );
 Console.Clear();
-Console.WriteLine("Informe se deseja caracteres especiais nas senha (S ou N): ");
 
+Console.WriteLine("Informe se deseja caracteres especiais nas senha (S ou N): ");
 do{
     senha_especiais_vef = Console.ReadLine().ToLower();
     if(senha_especiais_vef != "s" && senha_especiais_vef != "n"  )
         Console.WriteLine("Informe um reposta válida! (somente S ou N)");
 }while(senha_especiais_vef != "s" && senha_especiais_vef != "n"  );
+Console.Clear();
+
+Console.WriteLine("Informe a quantidade de caracteres especiais que deseja: ");
+do{
+    quantidade_caracteres_especiais = int.Parse(Console.ReadLine());
+    if(quantidade_caracteres_especiais > tamanho_senha){
+        Console.WriteLine("Informe um valor menor que o tamanho da senha!");
+    }
+}while(quantidade_caracteres_especiais > tamanho_senha);
 Console.Clear();
 
 String[] senha = new String[tamanho_senha];
