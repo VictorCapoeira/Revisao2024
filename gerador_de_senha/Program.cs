@@ -2,6 +2,11 @@
 string senha_numero_vef;
 string senha_letras_vef;
 string senha_especiais_vef;
+string [][] padroes = {
+    new string[] {"0","1","2","3","4","5","6","7","8","9"},
+    new string[] {"A","a","B","b","C","c","D","d","E","e","F","f","G","g","H","h","I","i","J","j","K","k","L","l","M","m","N","n","O","o","P","p","Q","q","R","r","S","s","T","t","U","u","V","v","W","w","X","x","Y","y","Z","z"},
+    new string[] {"!","@","#","$","%","&","*","/","?",".",","}
+};
 int tamanho_senha;
 
 
@@ -38,6 +43,6 @@ Console.Clear();
 String[] senha = new String[tamanho_senha];
 
 for(int i = 0; i <= tamanho_senha; i++){
-    
+
 }
 
