@@ -2,10 +2,12 @@
 string senha_numero_vef;
 string senha_letras_vef;
 string senha_especiais_vef;
+int resultado;
+
 
 Console.WriteLine("Gerador de senhas!");
 Console.WriteLine("Insira o tamanho da senha: ");
-while(!(int.TryParse(Console.ReadLine(), out int resultado))){
+while(!(int.TryParse(Console.ReadLine(), out resultado))){
     Console.WriteLine("Insira um valor válido! Somente números inteiros!");
 }
 Console.Clear();
@@ -15,6 +17,7 @@ do{
     if(senha_numero_vef != "s" && senha_numero_vef != "n"  )
         Console.WriteLine("Informe um reposta válida! (somente S ou N)");
 }while(senha_numero_vef != "s" && senha_numero_vef != "n"  );
+
 Console.Clear();
 Console.WriteLine("Informe se deseja letras nas senha (S ou N): ");
 do{
@@ -24,8 +27,13 @@ do{
 }while(senha_letras_vef != "s" && senha_letras_vef != "n"  );
 Console.Clear();
 Console.WriteLine("Informe se deseja caracteres especiais nas senha (S ou N): ");
+
 do{
     senha_especiais_vef = Console.ReadLine().ToLower();
     if(senha_especiais_vef != "s" && senha_especiais_vef != "n"  )
         Console.WriteLine("Informe um reposta válida! (somente S ou N)");
 }while(senha_especiais_vef != "s" && senha_especiais_vef != "n"  );
+Console.Clear();
+
+String[] senha = new String[resultado];
+
