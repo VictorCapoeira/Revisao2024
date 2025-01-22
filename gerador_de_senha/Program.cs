@@ -9,7 +9,7 @@ string [][] padroes = {
 };
 int tamanho_senha;
 Random random = new Random();
-
+int random_now;
 
 Console.WriteLine("Gerador de senhas!");
 Console.WriteLine("Insira o tamanho da senha: ");
@@ -44,6 +44,74 @@ Console.Clear();
 String[] senha = new String[tamanho_senha];
 
 for(int i = 0; i <= tamanho_senha; i++){
-
+    if(senha_numero_vef == "s" && senha_letras_vef == "n" && senha_especiais_vef == "n"){
+        senha[i] = padroes[0][random.Next(0, padroes[0].Length)];
+    }
+    if(senha_numero_vef == "n" && senha_letras_vef == "s" && senha_especiais_vef == "n"){
+        senha[i] = padroes[1][random.Next(0, padroes[1].Length)];
+    }
+    if(senha_numero_vef == "n" && senha_letras_vef == "n" && senha_especiais_vef == "s"){
+        senha[i] = padroes[2][random.Next(0, padroes[2].Length)];
+    }
+    if(senha_numero_vef == "s" && senha_letras_vef == "s" && senha_especiais_vef == "n"){
+        switch(random.Next(0,1)){
+            case 0:
+                senha[i] = padroes[0][random.Next(0, padroes[0].Length)];
+                break;
+            case 1:
+                senha[i] = padroes[1][random.Next(0, padroes[1].Length)];
+                break;
+            default:
+                Console.WriteLine("Error!");
+                break;
+        }  
+    }
+    if(senha_numero_vef == "s" && senha_letras_vef == "n" && senha_especiais_vef == "s"){
+        random_now = random.Next(0,2);
+        while(random_now == 1){
+            random_now = random.Next(0,2);
+        }
+        switch(random_now){
+            case 0:
+                senha[i] = padroes[0][random.Next(0, padroes[0].Length)];
+                break;
+            case 2:
+                senha[i] = padroes[2][random.Next(0, padroes[2].Length)];
+                break;
+            default:
+                Console.WriteLine("Error!");
+                break;
+            }  
+    }
+    if(senha_numero_vef == "n" && senha_letras_vef == "s" && senha_especiais_vef == "s"){
+        switch(random.Next(1,2)){
+            case 1:
+                senha[i] = padroes[1][random.Next(0, padroes[1].Length)];
+                break;
+            case 2:
+                senha[i] = padroes[2][random.Next(0, padroes[2].Length)];
+                break;
+            default:
+                Console.WriteLine("Error!");
+                break;
+            }   
+    }
+    if(senha_numero_vef == "s" && senha_letras_vef == "s" && senha_especiais_vef == "s"){
+        switch(random.Next(0,2)){
+            case 0:
+                senha[i] = padroes[0][random.Next(0, padroes[0].Length)];
+                break;
+            case 1:
+                senha[i] = padroes[1][random.Next(0, padroes[1].Length)];
+                break;
+            case 2:
+                senha[i] = padroes[2][random.Next(0, padroes[2].Length)];
+                break;
+            default:
+                Console.WriteLine("Error!");
+                break;
+            }   
+    }
 }
+
 
