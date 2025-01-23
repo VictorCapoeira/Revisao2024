@@ -2,6 +2,8 @@
 using System.IO;
 
 // See https://aka.ms/new-console-template for more information
+string user = "";
+string pass = "";
 string senha_numero_vef;
 string senha_letras_vef;
 string senha_especiais_vef;
@@ -17,6 +19,17 @@ int quantidade_caracteres_especiais = 0;
 int limite_caracteres_especiais = 0;
 string caminhoArquivo = "bkp.txt";
 
+do{
+    Console.Write("Informe o user: ");
+    user = Console.ReadLine();
+    Console.Write("Informe a senha: ");
+    pass = Console.ReadLine();
+    if(user != "Isaac" || pass != "12345"){
+        Console.WriteLine("User ou senha invalidos! Aperte enter para tentar novamente!");
+        Console.ReadKey();
+        Console.Clear();
+    }
+}while(user != "Isaac" || pass != "12345");
 
 Console.WriteLine("Gerador de senhas!");
 Console.WriteLine("Insira o tamanho da senha: ");
