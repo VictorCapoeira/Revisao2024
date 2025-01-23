@@ -16,6 +16,7 @@ Backlog
  - [ ] Indicar erros com vermelho
  - [ ] Incluir encerramento do programa
  - [ ] Refatorar código (incluir classes)
+ - [ ] Adicionar login (com dados internos)
   
  
  
