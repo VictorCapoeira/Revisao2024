@@ -1,3 +1,45 @@
+html{
+    font-size: 62.5%;
+    margin: 0;
+    padding: 0;
+}
+body{
+    
+    min-height: 100vh;
+    min-width: 100vw;
+}
+
+/* Configuração do Header */
+.hero{
+  & .navbar {
+    padding: 0;
+  }
+  & .container-fluid{
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    gap: 0 50%;
+    align-items: center;
+    background-color: #b08e6b;
+    /* padding: 0 3rem; */
+  }
+  & .collapse{
+    background-color: #e8c39e;
+  }
+  & .nav-link{
+    text-align: center;
+    font-size: 1.6rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.24);
+    color: #5f360b;
+    
+  }
+  & .active{
+    background-color: #5f360b3d;
+  }
+  
+}
+/* Configuração do Header */
+/* Configuração do Texto animado */
 .texto-animado {
     overflow: hidden;
     white-space: nowrap;
@@ -22,3 +64,26 @@
       transform: translateX(-100%);
     }
   }
+/* Configuração do Texto animado */
+/* Configuração do mais pedidos */
+.mais_pedidos{
+  padding-top: 2rem;
+  width: 90%;
+  margin: 0 auto;
+  & .mais_pedidos_title{
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 3rem;
+    color: #9b5a15;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.74);
+  }
+  & .mais_pedidos_cards{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background-color: #6aaa64;
+  }
+}
+/* Configuração do mais pedidos */
+
