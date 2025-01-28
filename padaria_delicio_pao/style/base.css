@@ -26,6 +26,16 @@ body{
   & .collapse{
     background-color: #e8c39e;
   }
+  & .nav-link{
+    text-align: center;
+    font-size: 1.6rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.24);
+    color: #5f360b;
+    
+  }
+  & .active{
+    background-color: #5f360b3d;
+  }
   
 }
 /* Configuração do Header */
