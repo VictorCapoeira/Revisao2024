@@ -91,8 +91,10 @@ body{
     height: 27.5rem;
   }
   & .card-title{
-
     text-transform: uppercase;
+  }
+  & .card-text{
+    font-size: 1.4rem;
   }
 }
 /* Configuração do mais pedidos */
