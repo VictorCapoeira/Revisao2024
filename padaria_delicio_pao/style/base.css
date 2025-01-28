@@ -126,6 +126,10 @@ body{
     text-transform: uppercase;
     font-size: 1.2rem;
   }
+  & .p_footer_rede{
+    display: flex;
+    gap: 1rem;
+  }
 }
 /* Configuração do footer */
 
