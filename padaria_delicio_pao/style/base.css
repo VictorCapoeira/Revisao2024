@@ -85,7 +85,7 @@ body{
     background-color: #6aaa64;
   }
   & .card{
-    width: 100%; 
+    flex-grow: 1;
   }
 }
 /* Configuração do mais pedidos */
