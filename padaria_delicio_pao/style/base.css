@@ -84,6 +84,9 @@ body{
     gap: 1rem;
     background-color: #6aaa64;
   }
+  & .card{
+    width: 100%; 
+  }
 }
 /* Configuração do mais pedidos */
 
