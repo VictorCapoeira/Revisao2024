@@ -39,6 +39,7 @@ body{
   
 }
 /* Configuração do Header */
+/* Configuração do Texto animado */
 .texto-animado {
     overflow: hidden;
     white-space: nowrap;
@@ -63,4 +64,20 @@ body{
       transform: translateX(-100%);
     }
   }
+/* Configuração do Texto animado */
+/* Configuração do mais pedidos */
+.mais_pedidos{
+  padding-top: 2rem;
+  width: 90%;
+  margin: 0 auto;
+  & .mais_pedidos_title{
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 3rem;
+    color: #9b5a15;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.74);
+  }
+}
+/* Configuração do mais pedidos */
 
