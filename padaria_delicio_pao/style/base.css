@@ -8,6 +8,18 @@ body{
     min-height: 100vh;
     min-width: 100vw;
 }
+
+/* Configuração do Header */
+.hero{
+  & .navbar {
+    padding: 0;
+  }
+  & .container-fluid{
+    background-color: #b08e6b;
+    padding: 0 3rem;
+  }
+}
+/* Configuração do Header */
 .texto-animado {
     overflow: hidden;
     white-space: nowrap;
@@ -32,3 +44,4 @@ body{
       transform: translateX(-100%);
     }
   }
+
