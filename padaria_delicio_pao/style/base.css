@@ -88,6 +88,7 @@ body{
     flex-grow: 1;
     border-radius: 1.5rem;
     overflow: hidden;
+    background-color: #ffd8b2f8;
   }
   & .card img{
     height: 27.5rem;
@@ -111,6 +112,7 @@ body{
     margin: 0 auto;
     font-size: 1.6rem;
     cursor: pointer;
+    border: none;
   }
 }
 /* Configuração do mais pedidos */
