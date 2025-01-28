@@ -112,4 +112,15 @@ body{
   }
 }
 /* Configuração do mais pedidos */
+/* Configuração do footer */
+.p_footer{
+  background-color: #5f360b;
+  margin-top: 2rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+/* Configuração do footer */
 
