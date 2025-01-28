@@ -15,6 +15,7 @@ body{
     padding: 0;
   }
   & .container-fluid{
+    padding: 0;
     display: flex;
     justify-content: space-around;
     gap: 0 50%;
@@ -25,6 +26,7 @@ body{
   & .collapse{
     background-color: #e8c39e;
   }
+  
 }
 /* Configuração do Header */
 .texto-animado {
