@@ -100,6 +100,16 @@ body{
   & .card-price{
     font-size: 1.8rem;
   }
+  & .btn{
+    background-color: #5f360b;
+    color: white;
+    display: block;
+    padding: 1rem;
+    width: 80%;
+    margin: 0 auto;
+    font-size: 1.6rem;
+    cursor: pointer;
+  }
 }
 /* Configuração do mais pedidos */
 
