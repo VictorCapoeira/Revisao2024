@@ -86,6 +86,8 @@ body{
   }
   & .card{
     flex-grow: 1;
+    border-radius: 1.5rem;
+    overflow: hidden;
   }
   & .card img{
     height: 27.5rem;
