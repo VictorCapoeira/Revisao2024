@@ -223,6 +223,9 @@ do
             File.AppendAllText(caminhoArquivo, senha_gerada + Environment.NewLine);
 
             break;
+        case "2":
+            Console.Clear();
+        break;
         case "3":
             Console.WriteLine("Programa encerrado. Volte sempre!");
             Console.ReadKey();
