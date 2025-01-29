@@ -5,6 +5,7 @@ using System.IO;
 string user = "";
 string pass = "";
 string action = "";
+string rotulo_vef;
 string senha_numero_vef;
 string senha_letras_vef;
 string senha_especiais_vef;
@@ -222,7 +223,12 @@ do
             {
                 Console.Write(senha[i]);
             }
-            string senha_gerada = string.Join("teste", senha);
+            string senha_gerada = string.Join("", senha);
+            Console.WriteLine("Deseja adicionar um rotulo a essa senha?");
+            rotulo_vef = Console.ReadLine().ToLower();
+            if(rotulo_vef == "s"){
+                
+            }
             File.AppendAllText(caminhoArquivo, senha_gerada + Environment.NewLine);
             Console.WriteLine("Pressione enter para continuar!");
             Console.ReadKey();
