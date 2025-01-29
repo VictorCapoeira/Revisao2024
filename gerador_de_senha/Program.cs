@@ -67,7 +67,9 @@ do
     Console.WriteLine("  [3] -> Sair");
     Console.ResetColor();
 
+    Console.Write("\n-> Opção: ");
     action = Console.ReadLine();
+    
     
     switch (action)
     {
