@@ -45,7 +45,10 @@ do
     }
 } while (user != "Isaac" || pass != "12345");
 
-Console.WriteLine("Bem-vindo ao gerador de senhas ", user, "!");
+Console.ForegroundColor = ConsoleColor.Green;
+Console.WriteLine("\nLogin bem-sucedido! Bem-vindo, " + user + "!");
+Console.ResetColor();
+Console.WriteLine("\nPressione qualquer tecla para continuar...");
 Console.ReadKey();
 do
 {
