@@ -27,18 +27,21 @@ do
     Console.Clear();
     Console.ForegroundColor = ConsoleColor.Cyan;
     Console.WriteLine("=====================================");
-    Console.WriteLine("      🔐 SISTEMA DE LOGIN 🔐        ");
+    Console.WriteLine("        SISTEMA DE LOGIN          ");
     Console.WriteLine("=====================================");
     Console.ResetColor();
+
     Console.Write("Informe o user: ");
     user = Console.ReadLine();
     Console.Write("Informe a senha: ");
     pass = Console.ReadLine();
     if (user != "Isaac" || pass != "12345")
     {
-        Console.WriteLine("User ou senha invalidos! Aperte enter para tentar novamente!");
+        Console.ForegroundColor = ConsoleColor.Red;
+        Console.WriteLine("\nUsuário ou senha inválidos! Tente novamente.");
+        Console.ResetColor();
+        Console.WriteLine("\nPressione qualquer tecla para continuar...");
         Console.ReadKey();
-        Console.Clear();
     }
 } while (user != "Isaac" || pass != "12345");
 
