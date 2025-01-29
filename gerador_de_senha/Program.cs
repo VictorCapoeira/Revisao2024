@@ -300,7 +300,14 @@ do
                     Console.WriteLine("Senhas salvas:");
                     foreach (string senhas in senhasSalvas)
                     {
+                        Console.ForegroundColor = ConsoleColor.Green;
+                        Console.WriteLine("\n Senhas salvas:");
+                        Console.ResetColor();
+                        Console.WriteLine("----------------------------------------");
+                        Console.ForegroundColor = ConsoleColor.Cyan;
                         Console.WriteLine("- " + senhas);
+                        Console.WriteLine("----------------------------------------");
+                        Console.ResetColor();
                     }
                 }
                 else
@@ -312,7 +319,9 @@ do
             }
             else
             {
+                Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine("Arquivo de senhas não encontrado.");
+                Console.ResetColor();
             }
             Console.WriteLine("\nPressione qualquer tecla para continuar...");
             Console.ReadKey();
