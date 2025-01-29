@@ -10,13 +10,13 @@ Etapas implementadas
 - [x] salvar em arquivo .TXT
 
 Backlog
- - [ ] Criar menu inicial
+ - [x] Criar menu inicial
  - [ ] Gerar senha com a cor verde
- - [ ] Recuperar senhas salvas
+ - [x] Recuperar senhas salvas
  - [ ] Indicar erros com vermelho
- - [ ] Incluir encerramento do programa
+ - [x] Incluir encerramento do programa
  - [ ] Refatorar código (incluir classes)
- - [ ] Adicionar login (com dados internos)
+ - [x] Adicionar login (com dados internos)
   
  
  
