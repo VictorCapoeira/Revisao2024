@@ -60,7 +60,13 @@ do
     Console.ResetColor();
 
 
-    Console.WriteLine("1 - Criar uma senha \n2 - Listar senhas \n3 - Sair");
+    Console.WriteLine("\nEscolha uma opção:\n");
+    Console.ForegroundColor = ConsoleColor.Cyan;
+    Console.WriteLine("  [1] -> Criar uma senha");
+    Console.WriteLine("  [2] -> Listar senhas");
+    Console.WriteLine("  [3] -> Sair");
+    Console.ResetColor();
+
     action = Console.ReadLine();
     
     switch (action)
