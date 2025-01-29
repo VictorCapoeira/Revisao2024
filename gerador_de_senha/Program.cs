@@ -38,11 +38,14 @@ Console.WriteLine("Bem-vindo ao gerador de senhas ", user, "!");
 Console.ReadKey();
 do
 {
+    Console.Clear();
     Console.WriteLine("1 - Criar uma senha \n 2 - Listar senhas \n 3 - Sair");
     action = Console.ReadLine();
+    
     switch (action)
     {
         case "1":
+            Console.Clear();
             Console.WriteLine("Insira o tamanho da senha: ");
             while (!(int.TryParse(Console.ReadLine(), out tamanho_senha)))
             {
