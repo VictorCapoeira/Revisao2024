@@ -1,6 +1,6 @@
 ﻿using System;
 using System.IO;
-
+using System.Text;
 // See https://aka.ms/new-console-template for more information
 string user = "";
 string pass = "";
@@ -23,20 +23,32 @@ int limite_caracteres_especiais = 0;
 string caminhoArquivo = "bkp.txt";
 
 do
-{
+{   
+    Console.Clear();
+    Console.ForegroundColor = ConsoleColor.Cyan;
+    Console.WriteLine("=====================================");
+    Console.WriteLine("        SISTEMA DE LOGIN          ");
+    Console.WriteLine("=====================================");
+    Console.ResetColor();
+
     Console.Write("Informe o user: ");
     user = Console.ReadLine();
     Console.Write("Informe a senha: ");
     pass = Console.ReadLine();
     if (user != "Isaac" || pass != "12345")
     {
-        Console.WriteLine("User ou senha invalidos! Aperte enter para tentar novamente!");
+        Console.ForegroundColor = ConsoleColor.Red;
+        Console.WriteLine("\nUsuário ou senha inválidos! Tente novamente.");
+        Console.ResetColor();
+        Console.WriteLine("\nPressione qualquer tecla para continuar...");
         Console.ReadKey();
-        Console.Clear();
     }
 } while (user != "Isaac" || pass != "12345");
 
-Console.WriteLine("Bem-vindo ao gerador de senhas ", user, "!");
+Console.ForegroundColor = ConsoleColor.Green;
+Console.WriteLine("\nLogin bem-sucedido! Bem-vindo, " + user + "!");
+Console.ResetColor();
+Console.WriteLine("\nPressione qualquer tecla para continuar...");
 Console.ReadKey();
 do
 {
