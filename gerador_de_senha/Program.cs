@@ -288,7 +288,7 @@ do
             Console.Clear();
             Console.ForegroundColor = ConsoleColor.Yellow;
             Console.WriteLine("=====================================");
-            Console.WriteLine("       🔓 LISTAGEM DE SENHAS         ");
+            Console.WriteLine("         LISTAGEM DE SENHAS           ");
             Console.WriteLine("=====================================");
             Console.ResetColor();
             
@@ -296,19 +296,18 @@ do
             {
                 string[] senhasSalvas = File.ReadAllLines(caminhoArquivo);
                 if (senhasSalvas.Length > 0)
-                {
+                {   
+                    Console.ForegroundColor = ConsoleColor.Yellow;
                     Console.WriteLine("Senhas salvas:");
+                    Console.ResetColor();
+                    Console.ForegroundColor = ConsoleColor.Cyan;
                     foreach (string senhas in senhasSalvas)
                     {
-                        Console.ForegroundColor = ConsoleColor.Green;
-                        Console.WriteLine("\n Senhas salvas:");
-                        Console.ResetColor();
                         Console.WriteLine("----------------------------------------");
-                        Console.ForegroundColor = ConsoleColor.Cyan;
                         Console.WriteLine("- " + senhas);
                         Console.WriteLine("----------------------------------------");
-                        Console.ResetColor();
                     }
+                    Console.ResetColor();
                 }
                 else
                 {
@@ -328,8 +327,13 @@ do
             Console.Clear();
             break;
         case "3":
-            Console.WriteLine("Programa encerrado. Volte sempre!");
-            Console.ReadKey();
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine("\n Obrigado por utilizar o programa.");
+            Console.ResetColor();
+            Console.ForegroundColor = ConsoleColor.Cyan;
+            Console.WriteLine("\n Volte sempre que precisar gerar ou visualizar suas senhas!");
+            Console.ResetColor();
+            Console.WriteLine("\nAté logo!\n");
             break;
     }
 } while (action != "3");
