@@ -18,6 +18,10 @@ Etapas implementadas
 Backlog
  
  - [ ] Refatorar código (incluir classes)
+ - [ ] Comparação de rotulos e senhas
+ - [ ] Ocultar senha
+ - [ ] Data e hora da criação
+ - [ ] Editar senha
  
   
  
