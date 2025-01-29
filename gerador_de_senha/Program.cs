@@ -222,9 +222,10 @@ do
             {
                 Console.Write(senha[i]);
             }
-            string senha_gerada = string.Join("", senha);
+            string senha_gerada = string.Join("teste", senha);
             File.AppendAllText(caminhoArquivo, senha_gerada + Environment.NewLine);
-
+            Console.WriteLine("Pressione enter para continuar!");
+            Console.ReadKey();
             break;
         case "2":
     Console.Clear();
