@@ -23,7 +23,7 @@ int limite_caracteres_especiais = 0;
 string caminhoArquivo = "bkp.txt";
 
 do
-{   
+{
     Console.Clear();
     Console.ForegroundColor = ConsoleColor.Cyan;
     Console.WriteLine("=====================================");
@@ -69,8 +69,8 @@ do
 
     Console.Write("\n-> Opção: ");
     action = Console.ReadLine();
-    
-    
+
+
     switch (action)
     {
         case "1":
@@ -96,8 +96,8 @@ do
                 senha_numero_vef = Console.ReadLine().ToLower();
                 if (senha_numero_vef != "s" && senha_numero_vef != "n")
                     Console.ForegroundColor = ConsoleColor.Red;
-                    Console.WriteLine("Informe uma reposta válida! (S/N)");
-                    Console.ResetColor();
+                Console.WriteLine("Informe uma reposta válida! (S/N)");
+                Console.ResetColor();
             } while (senha_numero_vef != "s" && senha_numero_vef != "n");
 
             Console.Clear();
@@ -107,8 +107,8 @@ do
                 senha_letras_vef = Console.ReadLine().ToLower();
                 if (senha_letras_vef != "s" && senha_letras_vef != "n")
                     Console.ForegroundColor = ConsoleColor.Red;
-                    Console.WriteLine("Informe uma reposta válida! (S/N)");
-                    Console.ResetColor();
+                Console.WriteLine("Informe uma reposta válida! (S/N)");
+                Console.ResetColor();
             } while (senha_letras_vef != "s" && senha_letras_vef != "n");
             Console.Clear();
 
@@ -118,8 +118,8 @@ do
                 senha_especiais_vef = Console.ReadLine().ToLower();
                 if (senha_especiais_vef != "s" && senha_especiais_vef != "n")
                     Console.ForegroundColor = ConsoleColor.Red;
-                    Console.WriteLine("Informe uma reposta válida! (S/N)");
-                    Console.ResetColor();
+                Console.WriteLine("Informe uma reposta válida! (S/N)");
+                Console.ResetColor();
             } while (senha_especiais_vef != "s" && senha_especiais_vef != "n");
             Console.Clear();
             if (senha_especiais_vef == "s")
@@ -266,12 +266,13 @@ do
             Console.WriteLine("\nSenha gerada com sucesso!");
             Console.WriteLine("Sua senha: ");
             Console.ForegroundColor = ConsoleColor.Cyan;
-            Console.WriteLine($"\n    {senha_gerada}");
+            Console.WriteLine($"{senha_gerada}");
             Console.ResetColor();
 
             Console.WriteLine("Deseja adicionar um rotulo a essa senha? (S/N)");
             rotulo_vef = Console.ReadLine().ToLower();
-            if(rotulo_vef == "s"){
+            if (rotulo_vef == "s")
+            {
                 Console.WriteLine("Nome do rotulo: ");
                 rotulo = Console.ReadLine();
                 senha_gerada = rotulo + ": " + senha_gerada;
@@ -284,31 +285,37 @@ do
             Console.ReadKey();
             break;
         case "2":
-    Console.Clear();
-    if (File.Exists(caminhoArquivo))
-    {
-        string[] senhasSalvas = File.ReadAllLines(caminhoArquivo);
-        if (senhasSalvas.Length > 0)
-        {
-            Console.WriteLine("Senhas salvas:");
-            foreach (string senhas in senhasSalvas)
+            Console.Clear();
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.WriteLine("=====================================");
+            Console.WriteLine("       🔓 LISTAGEM DE SENHAS         ");
+            Console.WriteLine("=====================================");
+            Console.ResetColor();
+            
+            if (File.Exists(caminhoArquivo))
             {
-                Console.WriteLine("- " + senhas);
+                string[] senhasSalvas = File.ReadAllLines(caminhoArquivo);
+                if (senhasSalvas.Length > 0)
+                {
+                    Console.WriteLine("Senhas salvas:");
+                    foreach (string senhas in senhasSalvas)
+                    {
+                        Console.WriteLine("- " + senhas);
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("Nenhuma senha encontrada.");
+                }
             }
-        }
-        else
-        {
-            Console.WriteLine("Nenhuma senha encontrada.");
-        }
-    }
-    else
-    {
-        Console.WriteLine("Arquivo de senhas não encontrado.");
-    }
-    Console.WriteLine("\nPressione qualquer tecla para continuar...");
-    Console.ReadKey();
-    Console.Clear();
-    break;
+            else
+            {
+                Console.WriteLine("Arquivo de senhas não encontrado.");
+            }
+            Console.WriteLine("\nPressione qualquer tecla para continuar...");
+            Console.ReadKey();
+            Console.Clear();
+            break;
         case "3":
             Console.WriteLine("Programa encerrado. Volte sempre!");
             Console.ReadKey();
