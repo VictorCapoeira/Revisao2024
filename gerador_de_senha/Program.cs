@@ -85,35 +85,41 @@ do
             while (!(int.TryParse(Console.ReadLine(), out tamanho_senha)))
             {
                 Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine("Insira um número válido maior que 0!");
+                Console.WriteLine("Insira um número válido maior que 0 ou um valor válido!");
                 Console.ResetColor();
                 Console.Write("\nInsira o tamanho da senha: ");
             }
             Console.Clear();
-            Console.WriteLine("Informe se deseja números nas senha (S ou N): ");
+            Console.WriteLine("Informe se deseja números nas senha (S/N): ");
             do
             {
                 senha_numero_vef = Console.ReadLine().ToLower();
                 if (senha_numero_vef != "s" && senha_numero_vef != "n")
-                    Console.WriteLine("Informe um reposta válida! (somente S ou N)");
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("Informe uma reposta válida! (S/N)");
+                    Console.ResetColor();
             } while (senha_numero_vef != "s" && senha_numero_vef != "n");
 
             Console.Clear();
-            Console.WriteLine("Informe se deseja letras nas senha (S ou N): ");
+            Console.WriteLine("Informe se deseja letras nas senha (S/N): ");
             do
             {
                 senha_letras_vef = Console.ReadLine().ToLower();
                 if (senha_letras_vef != "s" && senha_letras_vef != "n")
-                    Console.WriteLine("Informe um reposta válida! (somente S ou N)");
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("Informe uma reposta válida! (S/N)");
+                    Console.ResetColor();
             } while (senha_letras_vef != "s" && senha_letras_vef != "n");
             Console.Clear();
 
-            Console.WriteLine("Informe se deseja caracteres especiais nas senha (S ou N): ");
+            Console.WriteLine("Informe se deseja caracteres especiais nas senha (S/N): ");
             do
             {
                 senha_especiais_vef = Console.ReadLine().ToLower();
                 if (senha_especiais_vef != "s" && senha_especiais_vef != "n")
-                    Console.WriteLine("Informe um reposta válida! (somente S ou N)");
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("Informe uma reposta válida! (S/N)");
+                    Console.ResetColor();
             } while (senha_especiais_vef != "s" && senha_especiais_vef != "n");
             Console.Clear();
             if (senha_especiais_vef == "s")
