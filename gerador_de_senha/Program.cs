@@ -260,14 +260,14 @@ do
                     }
                 }
             }
-            Console.Clear();
-            Console.Write("Senha gerada e salva em arquivo: ");
-            for (int i = 0; i < senha.Length; i++)
-            {
-                Console.Write(senha[i]);
-            }
-            Console.Write("\n");
             string senha_gerada = string.Join("", senha);
+            Console.Clear();
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine("\n✅ Senha gerada com sucesso!");
+            Console.WriteLine("🔒 Sua senha: ");
+            Console.ForegroundColor = ConsoleColor.Cyan;
+            Console.WriteLine($"\n    {senha_gerada}");
+            Console.ResetColor();
             Console.WriteLine("Deseja adicionar um rotulo a essa senha?");
             rotulo_vef = Console.ReadLine().ToLower();
             if(rotulo_vef == "s"){
