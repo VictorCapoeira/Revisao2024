@@ -1,6 +1,6 @@
 ﻿using System;
 using System.IO;
-
+using System.Text;
 // See https://aka.ms/new-console-template for more information
 string user = "";
 string pass = "";
@@ -23,7 +23,13 @@ int limite_caracteres_especiais = 0;
 string caminhoArquivo = "bkp.txt";
 
 do
-{
+{   
+    Console.Clear();
+    Console.ForegroundColor = ConsoleColor.Cyan;
+    Console.WriteLine("=====================================");
+    Console.WriteLine("      🔐 SISTEMA DE LOGIN 🔐        ");
+    Console.WriteLine("=====================================");
+    Console.ResetColor();
     Console.Write("Informe o user: ");
     user = Console.ReadLine();
     Console.Write("Informe a senha: ");
