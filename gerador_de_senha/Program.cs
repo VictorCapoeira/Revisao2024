@@ -53,6 +53,13 @@ Console.ReadKey();
 do
 {
     Console.Clear();
+    Console.ForegroundColor = ConsoleColor.Yellow;
+    Console.WriteLine("=====================================");
+    Console.WriteLine("      GERENCIADOR DE SENHAS    ");
+    Console.WriteLine("=====================================");
+    Console.ResetColor();
+
+
     Console.WriteLine("1 - Criar uma senha \n2 - Listar senhas \n3 - Sair");
     action = Console.ReadLine();
     
