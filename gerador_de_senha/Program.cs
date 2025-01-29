@@ -224,8 +224,31 @@ do
 
             break;
         case "2":
-            Console.Clear();
-        break;
+    Console.Clear();
+    if (File.Exists(caminhoArquivo))
+    {
+        string[] senhasSalvas = File.ReadAllLines(caminhoArquivo);
+        if (senhasSalvas.Length > 0)
+        {
+            Console.WriteLine("Senhas salvas:");
+            foreach (string senhas in senhasSalvas)
+            {
+                Console.WriteLine("- " + senhas);
+            }
+        }
+        else
+        {
+            Console.WriteLine("Nenhuma senha encontrada.");
+        }
+    }
+    else
+    {
+        Console.WriteLine("Arquivo de senhas não encontrado.");
+    }
+    Console.WriteLine("\nPressione qualquer tecla para continuar...");
+    Console.ReadKey();
+    Console.Clear();
+    break;
         case "3":
             Console.WriteLine("Programa encerrado. Volte sempre!");
             Console.ReadKey();
