@@ -41,7 +41,7 @@ Console.ReadKey();
 do
 {
     Console.Clear();
-    Console.WriteLine("1 - Criar uma senha \n 2 - Listar senhas \n 3 - Sair");
+    Console.WriteLine("1 - Criar uma senha \n2 - Listar senhas \n3 - Sair");
     action = Console.ReadLine();
     
     switch (action)
@@ -224,13 +224,14 @@ do
             {
                 Console.Write(senha[i]);
             }
+            Console.Write("\n");
             string senha_gerada = string.Join("", senha);
             Console.WriteLine("Deseja adicionar um rotulo a essa senha?");
             rotulo_vef = Console.ReadLine().ToLower();
             if(rotulo_vef == "s"){
                 Console.WriteLine("Nome do rotulo: ");
                 rotulo = Console.ReadLine();
-                senha_gerada = rotulo + " : " + senha_gerada;
+                senha_gerada = rotulo + ": " + senha_gerada;
             }
             File.AppendAllText(caminhoArquivo, senha_gerada + Environment.NewLine);
             Console.WriteLine("Pressione enter para continuar!");
