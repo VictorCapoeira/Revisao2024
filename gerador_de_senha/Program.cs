@@ -53,8 +53,23 @@ Console.ReadKey();
 do
 {
     Console.Clear();
-    Console.WriteLine("1 - Criar uma senha \n2 - Listar senhas \n3 - Sair");
+    Console.ForegroundColor = ConsoleColor.Yellow;
+    Console.WriteLine("=====================================");
+    Console.WriteLine("      GERENCIADOR DE SENHAS    ");
+    Console.WriteLine("=====================================");
+    Console.ResetColor();
+
+
+    Console.WriteLine("\nEscolha uma opção:\n");
+    Console.ForegroundColor = ConsoleColor.Cyan;
+    Console.WriteLine("  [1] -> Criar uma senha");
+    Console.WriteLine("  [2] -> Listar senhas");
+    Console.WriteLine("  [3] -> Sair");
+    Console.ResetColor();
+
+    Console.Write("\n-> Opção: ");
     action = Console.ReadLine();
+    
     
     switch (action)
     {
