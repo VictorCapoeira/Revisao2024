@@ -75,6 +75,12 @@ do
     {
         case "1":
             Console.Clear();
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.WriteLine("=====================================");
+            Console.WriteLine("      🔑 CRIAÇÃO DE SENHAS SEGURAS   ");
+            Console.WriteLine("=====================================");
+            Console.ResetColor();
+            
             Console.WriteLine("Insira o tamanho da senha: ");
             while (!(int.TryParse(Console.ReadLine(), out tamanho_senha)))
             {
