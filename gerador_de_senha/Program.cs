@@ -77,14 +77,17 @@ do
             Console.Clear();
             Console.ForegroundColor = ConsoleColor.Yellow;
             Console.WriteLine("=====================================");
-            Console.WriteLine("      🔑 CRIAÇÃO DE SENHAS SEGURAS   ");
+            Console.WriteLine("        CRIAÇÃO DE SENHAS SEGURAS     ");
             Console.WriteLine("=====================================");
             Console.ResetColor();
-            
+
             Console.WriteLine("Insira o tamanho da senha: ");
             while (!(int.TryParse(Console.ReadLine(), out tamanho_senha)))
             {
-                Console.WriteLine("Insira um valor válido! Somente números inteiros!");
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine("Insira um número válido maior que 0!");
+                Console.ResetColor();
+                Console.Write("\nInsira o tamanho da senha: ");
             }
             Console.Clear();
             Console.WriteLine("Informe se deseja números nas senha (S ou N): ");
