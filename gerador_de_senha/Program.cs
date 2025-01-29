@@ -305,7 +305,9 @@ do
                 }
                 else
                 {
-                    Console.WriteLine("Nenhuma senha encontrada.");
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("\n Nenhuma senha salva ainda.");
+                    Console.ResetColor();
                 }
             }
             else
