@@ -144,21 +144,17 @@ body{
 @media screen and (min-width: 990px) {
   
   .hero{
-    & .collapse{
-      width: 100px;
-      
-      background-color: #6aaa64;
-    } 
     & .container-fluid{
       gap: 0;
+      padding-right: 5rem;
     } 
     & .navbar-nav{
         display: flex;
-        gap: 1rem;
-        flex-grow: 1;
-        width: 2000px;
-        background-color: #9b5a15;
+        width: 100%;
       }
+    & .nav-item{
+      flex-grow: 1;
+    }
 
   }
   
