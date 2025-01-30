@@ -1,6 +1,7 @@
 ﻿using System;
 using System.IO;
 using System.Text;
+using Classes;
 // See https://aka.ms/new-console-template for more information
 string user = "";
 string pass = "";
