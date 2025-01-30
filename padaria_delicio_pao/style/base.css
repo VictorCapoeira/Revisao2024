@@ -19,7 +19,7 @@ body{
     padding: 0;
     display: flex;
     justify-content: space-around;
-    gap: 0 50%;
+    gap: 0 50%; 
     align-items: center;
     background-color: #b08e6b;
     /* padding: 0 3rem; */
@@ -141,3 +141,40 @@ body{
 }
 /* Configuração do footer */
 
+@media screen and (min-width: 990px) {
+  
+  .hero{
+    & .container-fluid{
+      gap: 0;
+      padding-right: 5rem;
+      
+    } 
+    & .collapse{
+      background-color: transparent;
+    }
+    & .navbar-nav{
+        display: flex;
+        width: 100%;
+        gap: 1rem;
+      }
+    & .nav-item{
+      flex-grow: 1;
+    }
+    & .nav-link{
+      /* background-color: transparent; */
+    }
+
+  }
+  .mais_pedidos{
+    & .mais_pedidos_cards{
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+    & .card{
+      flex-basis: calc(50% - 1rem);
+    }
+  }
+}
+@media screen and (min-width: 1300px){
+  
+}
