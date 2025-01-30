@@ -147,13 +147,21 @@ body{
     & .container-fluid{
       gap: 0;
       padding-right: 5rem;
+      
     } 
+    & .collapse{
+      background-color: transparent;
+    }
     & .navbar-nav{
         display: flex;
         width: 100%;
+        gap: 1rem;
       }
     & .nav-item{
       flex-grow: 1;
+    }
+    & .nav-link{
+      /* background-color: transparent; */
     }
 
   }
