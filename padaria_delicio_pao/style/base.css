@@ -165,5 +165,13 @@ body{
     }
 
   }
-  
+  .mais_pedidos{
+    & .mais_pedidos_cards{
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+    & .card{
+      flex-basis: calc(50% - 1rem);
+    }
+  }
 }
