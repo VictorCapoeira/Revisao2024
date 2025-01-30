@@ -72,6 +72,7 @@ body{
   width: 90%;
   margin: 0 auto;
   & .mais_pedidos_title{
+    margin-top: 2rem;
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 2px;
