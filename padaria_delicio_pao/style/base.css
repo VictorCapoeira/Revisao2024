@@ -115,6 +115,9 @@ body{
     cursor: pointer;
     border: none;
   }
+  & .btn:hover{
+    background-color: #3d2309;
+  }
 }
 /* Configuração do mais pedidos */
 /* Configuração do footer */
